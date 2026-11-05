@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==79.0.1", "wheel==0.48.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llamafactory"
+version = "0.9.4+ppo4.portable1"
+description = "Frozen LLaMA-Factory PPO4 compatibility fork (legacy TRL 0.9.6)"
+requires-python = ">=3.11,<3.12"
+license = {text = "Apache-2.0"}
+dependencies = [
+ "torch==2.6.0", "transformers==4.57.1", "peft==0.17.1",
+ "trl==0.9.6", "accelerate==1.11.0", "datasets==4.0.0", "numpy>=1.26.4,<2",
+ "safetensors==0.8.0", "tokenizers==0.22.2", "PyYAML==6.0.3",
+ "pandas==2.3.3", "scipy==1.17.1", "matplotlib==3.11.2",
+ "gradio==5.50.0", "tyro==0.8.14", "tiktoken", "einops", "sentencepiece",
+ "protobuf", "packaging", "requests", "Pillow", "fire", "omegaconf"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

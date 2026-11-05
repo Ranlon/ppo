@@ -1,0 +1,765 @@
+{
+  "source": "M9-v5 frozen239/241-source family; failed rollout branches pruned",
+  "files": [
+    {
+      "path": "vendor/llamafactory/src/llamafactory/__init__.py",
+      "original_sha256": "ac3cedbab920eb4ff39a0aa78ebc614a55d7afac85278396ebbc124f857b3ea6"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/cli.py",
+      "original_sha256": "d32b69e0b379718a9d0cf7bbf7032e6104f234cf53b13ad9e276a4a3fe7530d8"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/launcher.py",
+      "original_sha256": "a2d79d6dab3935422a69de8f1a47eda1de60ce4a0bcaf0dc02032bd88c221bde"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/api/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/api/app.py",
+      "original_sha256": "99369f350ca92c3efd87625505fc17bd185b6eafbd6c28b9551126a28197f6a3"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/api/chat.py",
+      "original_sha256": "017f93f1d54429adce61924ed25bf61be1d26da315233398b1d448b2120f1661"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/api/common.py",
+      "original_sha256": "86c278f4bca6ec354364aa108878f04c360e0e97b8163f6f107349b7a3e2ffa3"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/api/protocol.py",
+      "original_sha256": "f4f1b370361c22d2b5b781f1f3dd5701aedf39c0e400c239fff6a5eb3f6bfefa"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/chat/__init__.py",
+      "original_sha256": "15f9960ed2e888daa1d3104a736d138927b3a86f4faf01446d2046da386eed9d"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/chat/base_engine.py",
+      "original_sha256": "21f8f22fe96ee40d480591d419e54fb07b4743e2905d683d297571b668eba55f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/chat/chat_model.py",
+      "original_sha256": "750a11b22e557ad3fd6d683895b2373937a79de143178c78ccb81fae261a06d1"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/chat/hf_engine.py",
+      "original_sha256": "af0bc6fe2acdc6ab05649b3650e9447f2d5ed4029a60d3241cbb088c1107aa20"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/chat/kt_engine.py",
+      "original_sha256": "96f6a2783e1cc8df5b4853ae96a3feb28e554a3064cd602edb9bda411b62544f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/chat/sglang_engine.py",
+      "original_sha256": "5415a34ceeb8173763083b638b6bf37e33754e6643393baed1c1c719f2440766"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/chat/vllm_engine.py",
+      "original_sha256": "5dac30a729f8c6c719dbe2552965d5893d4edfb36fccf9a56f915b90b35b04ef"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/__init__.py",
+      "original_sha256": "e00ca55d2a9a73063c69a334d1595480b1802ace8a1589f5e59fa40493021c3a"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/collator.py",
+      "original_sha256": "5be4ca6984a2f99d4dea627c2ef0fff95c66a8d73326a4ceae61dd01f56c7390"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/converter.py",
+      "original_sha256": "2daa78110adc21c2d2f96f7d86a20db0659d431152529eaaac407fe4327a4c52"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/data_utils.py",
+      "original_sha256": "473baa79b32a32f21b08ab645e39af62bb81f4ce51f1b4ec88179cc3faed8973"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/formatter.py",
+      "original_sha256": "345728a904b0a0168003cd44424d068fcddf7ea0d3c2ec07718f68b19e879d77"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/loader.py",
+      "original_sha256": "f5f59ae8dcb65f95f16052d3c79645adbb02304ba3425682036a41728d0340d0"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/mm_plugin.py",
+      "original_sha256": "d9db1205309b405fe2d2e51281041905f76e2ac61b88d797914ae0a6e7351322"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/parser.py",
+      "original_sha256": "0770aa3771fbbea8629d351bdab6bf8126fcff7b68ca7d79e89a39484aa41bb8"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/template.py",
+      "original_sha256": "d4306a81837265a0ab3ea323dc93f016ab8a88914437091254632f865cb2feee"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/tool_utils.py",
+      "original_sha256": "a9b4c4400ffbf9361bf8c857de2e797fdda178adc9149b2127d79196c4f442ac"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/processor/__init__.py",
+      "original_sha256": "37e001ac9f5bc6495a2a354df683523d872ce43caba6d92cb673e7948fbc86a9"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/processor/feedback.py",
+      "original_sha256": "970982a407048382ecd4e3836b3c0273522e8d797fd4f9b89f131b314437d596"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/processor/pairwise.py",
+      "original_sha256": "de5e30236c8199c53bc5fb2fbea48590f137f47709167570e99a9c65d5bd3249"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/processor/pretrain.py",
+      "original_sha256": "e2373327e199e342a46d499a78e74bf2bd6be31560b079c25d79c68ac27abe85"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/processor/processor_utils.py",
+      "original_sha256": "5452edcf5e9ea67bfec3369537d478d65d17adc3c925aa95fda7a12453038204"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/processor/supervised.py",
+      "original_sha256": "21554b511accf3bbc2478e03385c0f7aaabca1b94de3a0c0f294c1f0486c3296"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/data/processor/unsupervised.py",
+      "original_sha256": "6309fcf8f2edc9f8b938baef0f1c1f2ed025cd10710cc3ed62e761c37a48ea39"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/eval/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/eval/evaluator.py",
+      "original_sha256": "133b27cfd5ee7aafcc9f0c8e69bcbffac9078fd78b50af9b3c7d5ac5580cb6c4"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/eval/template.py",
+      "original_sha256": "07223c49634e8b8c0319b431d70c208f176e0ddda8782d1c758478d3c4e8e33e"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/extras/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/extras/constants.py",
+      "original_sha256": "8fd1152c9f08f1d73b05f3be4b1c8986df5d9b911a90a509612fcb83ea72838c"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/extras/env.py",
+      "original_sha256": "8742f51ef401482db0c471132442f33f3cc52d7a9d89b325bb06e3864940184b"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/extras/logging.py",
+      "original_sha256": "a7120c79412a1fe04dafc89f1560d6d7dd0ac351f149ce04b39ac10e3f2a8985"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/extras/misc.py",
+      "original_sha256": "af072f14bb1d6998acdedf70b63dffadd6472fe47b19e2d559f24dd68acfa1c3"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/extras/packages.py",
+      "original_sha256": "a08e40935e193f4e6e604437d8529f911069fe3538c1737344f5c5e5dfe6428a"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/extras/ploting.py",
+      "original_sha256": "19a266908828daa94d859b037338aceaffd19aaeee1f081bff1063b67201cd6f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/hparams/__init__.py",
+      "original_sha256": "5db5c8a01e9e6380b530d126ac536527714aaec3516f22073635f6e95681fdf4"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/hparams/data_args.py",
+      "original_sha256": "5668a2de33c185df0345ecfa7997210d1621870d908996047ee3c9c194e47cab"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/hparams/evaluation_args.py",
+      "original_sha256": "ea46e645a910c7da564fb95a69df163be9e37c909e347bc2275df74bee7698b0"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/hparams/finetuning_args.py",
+      "original_sha256": "6ce6c2aff8a64a58bd79f47a1405b582533bdd6100e592561ffe2a95e9a65c0a"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/hparams/generating_args.py",
+      "original_sha256": "23b8453d233580a4a10765ae0ac5e0c15652a57b5d0e3612ad0473630a6445b4"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/hparams/model_args.py",
+      "original_sha256": "a6b291b872b2ab9d07c250daf7a4f7310ae9ad626719ef621386889df0e0110a"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/hparams/parser.py",
+      "original_sha256": "c77a7c30ca07278b229c4c5d4921fd41c2bdec29ba93224875ab3a456fa0ff5f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/hparams/training_args.py",
+      "original_sha256": "8bbd9843c4fb1bea8c73295adf785ebe8cd79970abc656954d04803d8be8a2e8"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/__init__.py",
+      "original_sha256": "ecc13a66e380265e515c6bffbbd142061aed779905c00c5638233919d96379a4"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/adapter.py",
+      "original_sha256": "db1ec6792e9b1b437071087257e973d092a25b4fb519eba58662b826ea0e9bf4"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/loader.py",
+      "original_sha256": "4398d1e484287359e5591b9f51b42e19d139d5a1d3f018c0c1f03e7a8184b598"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/patcher.py",
+      "original_sha256": "c536eef6b9b5c7031edca8f5b134c3feb37600b615b22e59f2ff9088c316c590"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/attention.py",
+      "original_sha256": "8ea49e9acabf67d7f1ec62490372a744255220d45c34e3a0a892fbc8b093b6fe"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/checkpointing.py",
+      "original_sha256": "426db3ed211049629deaaeb6583429b917992bc3a52fc1ec2d98f15ef0f8988e"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/embedding.py",
+      "original_sha256": "03d55b82f94879dec7dbb15433c2b71b2d3ecc96abce3bd82996fb05b2c10fa3"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/ktransformers.py",
+      "original_sha256": "5b30079da945c8d4ccc6f853a1df962eefd135515fde74f207076d41d0e60ced"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/kv_cache.py",
+      "original_sha256": "a162a35c87762bf91f9ada0714d4da24e83abc2929fe82f3946a6c9beebbe894"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/liger_kernel.py",
+      "original_sha256": "97b5a61dd39aefc0237ba9fe0c274d294bda49084f7db5e73d57af412b868282"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/longlora.py",
+      "original_sha256": "a38ad775c223a4eabcf4f8840d72b854b1f00841ab09bd11478da2c540e1e393"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/misc.py",
+      "original_sha256": "ac03f5286f53ef320242c4088219ac8165cb1d90f4d7262c5687cb07732daf76"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/mod.py",
+      "original_sha256": "675e96990dd09995a7540f60f12a3a51cb3b57c7f97cdf9a05902d9c2f5aca36"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/moe.py",
+      "original_sha256": "55fb3fc17938fe2ab9738609b2439fbac42ab5a4d23f81b98734fd3900fdda55"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/packing.py",
+      "original_sha256": "9f0c3140a62f526be38683b0b2d99e75033a8345ef31dfc16b3214e3ba0a246b"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/quantization.py",
+      "original_sha256": "873393d49f5b4495b0db2afab879905b61ff3afe50c2ca600a1202522488f4de"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/rope.py",
+      "original_sha256": "1a63e7b1a16f1f8a9eaeae8c26763b1ee036a88c676fd0ff68a9c8a168aab5ae"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/unsloth.py",
+      "original_sha256": "40d3498feeb9d27a4ebe9ecb01b7a6a33feace62dd5cce27b850277af087bac8"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/valuehead.py",
+      "original_sha256": "151023380cb75e1d7fb120de1cea2af6b2fc6159d84be85dacdd872055087412"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/model/model_utils/visual.py",
+      "original_sha256": "0f9a4609a5dee6d2b571d0b6b9fb3a9ce34c66ac7a38fb1b8eac27c1908cfa48"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/third_party/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/third_party/muon/__init__.py",
+      "original_sha256": "d3d8af7d3e2a9eceafc91afc6ad367485c96c636eb8f27c86c6dcdf88bc727ad"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/third_party/muon/muon.py",
+      "original_sha256": "dc30cd84142fe2f80d0d4728648e9270550907bd6f4bfd7b1becffd0215910ea"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/callbacks.py",
+      "original_sha256": "8dc4e36305f222c52c91627f8a440e8dde621b84cd208585e328fa3c667dda3a"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/fp8_utils.py",
+      "original_sha256": "8654be3a74da4fcf428472ee65b7726a08455c9b2451b399537680774c771cf6"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/test_utils.py",
+      "original_sha256": "95c0e3aece396a6400f6aae27603d945dade75ea18117a6bb7025397b57381ba"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/trainer_utils.py",
+      "original_sha256": "9f283fab2fdb81603f6845967a95dc6aa637b610992974c48694ff6eb75dffa3"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/tuner.py",
+      "original_sha256": "2e7b0bbd3db765ab140be8539f36c4c72e9bf53572ff43e719aed944fcde113a"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/dpo/__init__.py",
+      "original_sha256": "9b2dbca82aee3f7704500647336a7956d6029552020c1c5de7f1e2ec6d9cca9b"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/dpo/ktrainer.py",
+      "original_sha256": "f46f6c7246740fa21f4daa8d20e0d11e4152eb85347cf50dbbce76b7b8970cac"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/dpo/trainer.py",
+      "original_sha256": "f0a103ea8358a6de61a95b7e7e17ececb3dc610dd2cc0b586495463d45aac2cc"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/dpo/workflow.py",
+      "original_sha256": "12e03b82dc61ac8c0149be9f2f6aef1919e4519d794e27ccf909970a740fc678"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/kto/__init__.py",
+      "original_sha256": "40bade681d34f680959be317376ceadcea6504164debc937455a07900ce3692b"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/kto/trainer.py",
+      "original_sha256": "fe64cb948c9610333fe12a606b9c22106d8c2a2794eadacf91481eca58cd40c2"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/kto/workflow.py",
+      "original_sha256": "694d66cadb3d0f0e6e7611753e7067b78fdd2f99dccb4388fef783f8eb0d9777"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/mca/__init__.py",
+      "original_sha256": "ba72c89df2a9c836622adb550b513efcdf11465af981c688b2d58a2761b55338"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/mca/trainer.py",
+      "original_sha256": "92672f10af73a550ace7f0958c9d52ec866d7eddeaa1bc652a339f954ced2c0e"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/mca/workflow.py",
+      "original_sha256": "f93c075a61e91487acc5873f421b4ae2c0c462b34a611d281f62eb2e92b6556a"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/ppo/__init__.py",
+      "original_sha256": "f418101b642522951b2b24a9076b07afb09f2a16d5877dd4a352ab3603c56f0f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/ppo/ppo_utils.py",
+      "original_sha256": "776bdd79746ccfc86998dfa489b4339892d39d0101b896a1da93279f2dc86c59"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/ppo/rollout_acceleration.py",
+      "original_sha256": "7d7976dc52494b4ee7f172d897813f0c607b94438f1e45b29f754018293740d8"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/ppo/trainer.py",
+      "original_sha256": "099022e174b8264b2c819e2484c1d76028664664fd824371103be4f547e342c3"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/ppo/workflow.py",
+      "original_sha256": "62f78fcd3e735723f14b7b4a6ca5620a33c2aec58f0007e391284637a16a713f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/pt/__init__.py",
+      "original_sha256": "bcb16c0d3e8aece0a6e5392ce746640ea9a23e3cfc26f89b979ce7d8bf8a37f3"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/pt/trainer.py",
+      "original_sha256": "5181d040c98107e17728a0c382f3bb9597ebbf2a080678e52b065ed3cab860a0"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/pt/workflow.py",
+      "original_sha256": "760130406928e26b464ed891ce793bc1b007f2166e47d8e80d76a7d0e07cb158"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/rm/__init__.py",
+      "original_sha256": "926652616e721319140a27d3aad3012a4ff5f1a55a61d77e042f815ae42c8488"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/rm/metric.py",
+      "original_sha256": "a58f18701ea9b084d620a2d574e14bf7ba916a10025e144060b1ab18e4e33836"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/rm/trainer.py",
+      "original_sha256": "d1588cf683590d6187713496459c410ba92608fcd736270e854bccecfcc1e743"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/rm/workflow.py",
+      "original_sha256": "b39b12c5cdfeccd33405853f63b2e40cff5b2fc920a63665148608030072c687"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/sft/__init__.py",
+      "original_sha256": "27f7d9876d56309efd2bff46b8c10bbc034f37f8b1d9ddd2f1cd6b4a25cd88e5"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/sft/metric.py",
+      "original_sha256": "ed8807eaca1637edb2144b1e190a1cb84e5644400e21a16745477b49a132cab6"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/sft/trainer.py",
+      "original_sha256": "66e2c3dbbe0acda54090edb6e29a9e3fbc0bd7ed7aaf808bacac61d624e3172b"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/train/sft/workflow.py",
+      "original_sha256": "eadb7829102c234d00464ca7895ea9bf33993d9503d7b713770012be4ef44735"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/launcher.py",
+      "original_sha256": "7b6dd1989391b6711f811fa0330596d94548b4b4d2a8fb028c140ac4dca6521d"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/accelerator/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/accelerator/helper.py",
+      "original_sha256": "35a0f3f31736381aa7a9c9ffab35fb576332c8b3984a6b8904588d1f1bf465b0"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/accelerator/interface.py",
+      "original_sha256": "a43beb88f2b070ea5e46d1047c8f8cb418154e49074d562c90b87da25af9345b"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/accelerator/profiler.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/config/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/config/arg_parser.py",
+      "original_sha256": "6f5aad22947eae752cb4dc8b0b525df267d452bed654a7d096382bc6d3eecfce"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/config/arg_utils.py",
+      "original_sha256": "105e92be1600c6ee4119046a700d7060ee7fcd2e33cf57da634d9571663ee935"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/config/data_args.py",
+      "original_sha256": "279fb643d0f41fbbc008b7d2c0491170f3f90be8d342ab24635605daddcfbf14"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/config/model_args.py",
+      "original_sha256": "fd0c9799068f6ac3b9a04ee508be796f68f60bd281bf5effa86e21ec2afe535e"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/config/sample_args.py",
+      "original_sha256": "190af49f3a39302231dbb63a5bf025306dc9c72ae86be51922d6c1c191a3422f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/config/training_args.py",
+      "original_sha256": "4921481723efcb34ffd67fe8a9e7a9c4857c5e3d0b40e7b0401d1b5cf10ca049"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/base_trainer.py",
+      "original_sha256": "ed5c259b7ebf046db22da659d2bea21c83d4e595247a6cd6c1d7c6185065ca93"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/chat_sampler.py",
+      "original_sha256": "bf38cb2e429da29358500cbd525b2d976ece8d06b872dc2f2ad866c4b2f46209"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/data_engine.py",
+      "original_sha256": "bad5ec61ea7beb97f9fbf9b5cef7d5e72f9702fed57223fd4bc6587f8328a949"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/model_loader.py",
+      "original_sha256": "87867c742a7f5d86370a3d5292797baa9b3b3d16b1d96744b886651ea54db83f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/trainer_utils/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/trainer_utils/callback.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/trainer_utils/data_collator.py",
+      "original_sha256": "891b192ec9966f5395e92f19324569bb7648cb37c724b682b441fa836edbd46e"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/trainer_utils/data_loader.py",
+      "original_sha256": "3ad73cf0e243c26f4862b93022d87506f9cfaec1bf51771e3f1aea6bcddc68b6"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/core/trainer_utils/lr_scheduler.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/data_plugins/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/data_plugins/converter.py",
+      "original_sha256": "97fb7337e4378b2228e25bf352bec4c52111f8cc69dd16b4643d171a6565c942"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/data_plugins/loader.py",
+      "original_sha256": "381f7d57057e988c248107ec4117ba6216f4ec3279aa6957ef3ccdf074401157"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/data_plugins/template.py",
+      "original_sha256": "323f9501b0e91620d4745977b6aef1aece5cc6ccb6b6b55e52abad79633e9c6c"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/added_token.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/initialization.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/peft.py",
+      "original_sha256": "23509c1756da2096531b15fc1dab7f34fd257971ba6db5342035cc50da7dba5e"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/quantization.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/base.py",
+      "original_sha256": "66de2ab12c6abc218d01494d3bff0f4208833fd8f23502a5243e4162b9278ab5"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/interface.py",
+      "original_sha256": "375ce2b50af1d1b12994d87a2be199dfcb40e87ec41674407593e997e41cb840"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/registry.py",
+      "original_sha256": "bb1cc8cc7756a00a572d6306d69d57a21aeaa17ebea3696b28b3933155b0e14a"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/ops/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/ops/mlp/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/ops/mlp/npu_fused_moe.py",
+      "original_sha256": "244751756b7639a48f9864da56e624290c3750816edab38c1933775d459aad18"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/ops/mlp/npu_swiglu.py",
+      "original_sha256": "b2e9647c762c96e55de38d1eab7cc0137c7d7bac223331120daf2e838edbfffe"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/ops/rms_norm/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/ops/rms_norm/npu_rms_norm.py",
+      "original_sha256": "8697687c08c8ae53e59e55fdfc22009472adcdcb75da9e80182c88d82b98a1de"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/ops/rope/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/model_plugins/kernels/ops/rope/npu_rope.py",
+      "original_sha256": "77b7f66fe31b0f3477d2326e4ffb168fde69fc1c9d1536531626b6fe242db621"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/sampler_plugins/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/sampler_plugins/vllm.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/trainer_plugins/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/trainer_plugins/distributed/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/trainer_plugins/distributed/accelerate.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/plugins/trainer_plugins/distributed/deepspeed.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/trainers/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/trainers/dpo_trainer.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/trainers/rm_trainer.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/trainers/sft_trainer.py",
+      "original_sha256": "d789c49cb8e88b44154c16cbf6d726d6b2beeab17f7b721c56ef3df0cba87c4c"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/batching_queue.py",
+      "original_sha256": "2dc13522542e2d060891ce72f405d10afd8fa8c3c64493cbf1f911b537008068"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/constants.py",
+      "original_sha256": "1aa7b1fb0d494e319185345e59f2cffa981e965f63f1e126698cb49e330c7891"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/dtype.py",
+      "original_sha256": "7b1fc9d015099b74ee06233dbeb1fc37e813bce6e345ce71020a0b36ca8df0de"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/env.py",
+      "original_sha256": "4e7b7191283402c018a18795387113082ea3b3dec804edf4a05b1805a35bdd64"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/logging.py",
+      "original_sha256": "cd7663c9ecf129000d260282af341e421749c33afc234e251758a00e38c0a995"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/packages.py",
+      "original_sha256": "9ca883cf9dbf28db1b984c4815b005e77753ea379695b5ec3696a22b8127b564"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/plugin.py",
+      "original_sha256": "21fd27033d6faf0e5b92f81f27e6cc2ad3cfc4be55d65c9f62dbefb8d64b59de"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/pytest.py",
+      "original_sha256": "cc371baf5f8a153585f32358e49d12f42ce7972643d0c10af69a246a8745d521"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/v1/utils/types.py",
+      "original_sha256": "8139f1c425d0d92ff9a0add7857f77190306ea62a749dd564241dfcd3031e280"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/__init__.py",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/chatter.py",
+      "original_sha256": "f0b33a0db4489f74970849104430bfa9914fdbb8801c04dd10eeba78a190fe4b"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/common.py",
+      "original_sha256": "e98eb892549c2e47dc1553906c3c4849a85995a2c8be6a10b8f9c8bd3d27487e"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/control.py",
+      "original_sha256": "1377c24209469dffdf0c3b3bc7576cab181a26da4fae734f4de6ab0280b78dbe"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/css.py",
+      "original_sha256": "6291fd0721301dd7d97e3ea45bbd049b790093d2bc183582d441b8ba9beb8af7"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/engine.py",
+      "original_sha256": "a556375e7e6b532dcf9b4dd670eb68bd9ca26d96dc88eece09c727386404b548"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/interface.py",
+      "original_sha256": "2a7cb77e442137d92d361eed95d430e362b57a006acb49750d8049b5f740b5d8"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/locales.py",
+      "original_sha256": "76776d2f4202fb13b7bad2d6a2bd493a2ff01b181482e05bc085de06abc2f76c"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/manager.py",
+      "original_sha256": "206b7d13a1074be0f1cd00c1d3752aaadade753fb1d846bd9e9322fbc21e3158"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/runner.py",
+      "original_sha256": "62bc37a0055d5a97e6e4e05a3bc9405b7b5f06a994b983fe17ce495560f458e7"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/__init__.py",
+      "original_sha256": "886caf84a6d5a4b0f9d4bb2f81b74b567bb9c32c40fbf34d58c0204309b70b5d"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/chatbot.py",
+      "original_sha256": "de4e75ce01838a791fe4f781e3ab56fd64b4b2eefd5b4f7ac91da605dedfa20f"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/data.py",
+      "original_sha256": "0981ffa2550840115f12fce36e6a8d94fd05134242f4e6639df4e504895fca87"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/eval.py",
+      "original_sha256": "996ec48471731280b0eab446f30619861f42504380ab55536307baea0b101f7b"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/export.py",
+      "original_sha256": "4478048c942543cd5cfbd99defca8c21401f3c1b2c634a49602888eff64f7eda"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/footer.py",
+      "original_sha256": "4ce0e8d322c59c2c5dd9789d97865001b65049670df1a49c4895724dd7b129af"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/infer.py",
+      "original_sha256": "1b53c34c6096733c910a7503e8e887ce2587fcb10dcc29d5234ce772f410b652"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/top.py",
+      "original_sha256": "fbfb16c63ceaf9adfdd518ae7a11bbb12e43cfc1397ee5024f4fbb1ce74b14bd"
+    },
+    {
+      "path": "vendor/llamafactory/src/llamafactory/webui/components/train.py",
+      "original_sha256": "549a768c1f8697a2c0b4efb2f586ed1f465e0727526d468df93e4ac86f3aa5a5"
+    }
+  ]
+}

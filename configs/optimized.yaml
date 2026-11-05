@@ -1,0 +1,11 @@
+name: optimized
+description: Selected optimization scheme with requested full temporary merge for larger GPUs; combination pending target-GPU validation
+sft:
+  checkpoint_policy: none
+runtime:
+  rollout: merged_compiled
+  python_gc_per_batch: true
+  head_probabilities: bf16_masked
+  static_cache_length: 768
+  merge_backup: gpu
+  merge_chunk_rows: 1024
