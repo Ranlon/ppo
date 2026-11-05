@@ -28,10 +28,16 @@ def main():
     args.smoke=args.limit<935
     from project import read,write as project_write
     profile=read(ROOT/'PROFILE.json')
+    odb_settings=profile['sft'].get('odb')
+    if odb_settings and args.resume_hf:
+        raise ValueError('ODB SFT resume is not implemented; use a fresh run directory')
     folder = ROOT / name; folder.mkdir(exist_ok=False)
     config = json.loads((ROOT / 'SFT_CONFIG.json').read_text())
     config['output_dir'] = str(folder / 'model')
     if args.smoke:config.update(max_steps=args.limit,logging_steps=1,plot_loss=False)
+    if odb_settings:
+        config.update(gradient_accumulation_steps=odb_settings['gradient_accumulation_steps'],
+            max_steps=args.limit if args.smoke else 7473,dataloader_prefetch_factor=16)
     if args.resume_hf:config['resume_from_checkpoint']=str(Path(args.resume_hf).resolve())
     (folder / 'RUN_CONFIG.json').write_text(json.dumps(config, indent=2) + '\n')
     expected = json.loads((ROOT / 'DATA_PREFLIGHT.json').read_text())
@@ -50,9 +56,11 @@ def main():
         def __init__(self, *a, **kw):
             super().__init__(*a, **kw)
             assert len(self.train_dataset) == 7473
-            assert self.args.gradient_accumulation_steps == 8 and self.args.per_device_train_batch_size == 1
+            expected_accumulation=odb_settings['gradient_accumulation_steps'] if odb_settings else 8
+            assert self.args.gradient_accumulation_steps == expected_accumulation and self.args.per_device_train_batch_size == 1
             assert self.args.bf16 and not self.args.fp16 and not self.args.dataloader_drop_last
-            assert self.args.num_train_epochs == 1 and self.args.get_warmup_steps(935) == 29
+            assert self.args.num_train_epochs == 1
+            if not odb_settings:assert self.args.get_warmup_steps(935) == 29
             params = [p for p in self.model.parameters() if p.requires_grad]
             assert sum(p.numel() for p in params) == 17751040
             assert all(p.dtype == torch.float32 for p in params)
@@ -82,7 +90,15 @@ def main():
                 self.examples += 1
             return super().training_step(model, inputs, *a, **kw)
 
-    workflow.CustomSeq2SeqTrainer = AuditedSFT
+    if odb_settings:
+        from odb_sft import ODBSFTMixin
+        class ODBAuditedSFT(ODBSFTMixin, AuditedSFT):
+            def __init__(self,*a,**kw):
+                super().__init__(*a,**kw)
+                self.setup_odb(odb_settings)
+        workflow.CustomSeq2SeqTrainer = ODBAuditedSFT
+    else:
+        workflow.CustomSeq2SeqTrainer = AuditedSFT
 
     class Audit(TrainerCallback):
         def on_train_begin(self, training_args, state, control, **kw):
@@ -97,7 +113,9 @@ def main():
                 examples=trainer.examples, total_examples=7473, elapsed_seconds=elapsed,
                 input_tokens=trainer.tokens, supervised_tokens=trainer.supervised,
                 input_tokens_per_second=trainer.tokens / elapsed, supervised_tokens_per_second=trainer.supervised / elapsed,
-                estimated_remaining_seconds=elapsed / state.global_step * (state.max_steps-state.global_step),
+                estimated_remaining_seconds=(elapsed / max(1,trainer.examples) * max(0,7473-trainer.examples)
+                    if odb_settings else elapsed / state.global_step * (state.max_steps-state.global_step)),
+                odb=odb_settings,
                 allocator_ooms=memory.get('num_ooms', 0), allocator_retries=memory.get('num_alloc_retries', 0),
                 peak_allocated_gib=torch.cuda.max_memory_allocated() / 2**30,
                 peak_reserved_gib=torch.cuda.max_memory_reserved() / 2**30))
@@ -111,7 +129,8 @@ def main():
     workflow.run_sft(*get_train_args(config), callbacks=[Audit()])
     trainer = holder[0]
     if not args.smoke and not args.resume_hf:
-        assert seen == trainer.expected and trainer.examples == 7473 and trainer.state.global_step == 935
+        assert seen == trainer.expected and trainer.examples == 7473
+        if not odb_settings:assert trainer.state.global_step == 935
         assert trainer.tokens==trainer.expected_tokens and trainer.supervised==trainer.expected_supervised
     adapter = folder / 'model/adapter_model.safetensors'
     from safetensors.torch import load_file
@@ -130,7 +149,12 @@ def main():
         allocator_ooms=memory.get('num_ooms', 0), allocator_retries=memory.get('num_alloc_retries', 0),
         peak_allocated_gib=torch.cuda.max_memory_allocated()/2**30,
         complete_hf_checkpoints=[str(p) for p in checkpoint_dirs], fresh_from_base=True,
-        original_alpaca_adapter_not_loaded=True, native_e0_settings_with_output_head_lora=True)
+        original_alpaca_adapter_not_loaded=True, native_e0_settings_with_output_head_lora=not bool(odb_settings))
+    if odb_settings:
+        result.update(odb=odb_settings,batch_size_histogram=dict(trainer.odb_batch_sizes),
+            mean_batch_size=trainer.examples / sum(trainer.odb_batch_sizes.values()),
+            padding_fraction=1-trainer.tokens / trainer.odb_padded_tokens,
+            scheduler_progress='consumed_samples',loss_normalization='shifted_supervised_tokens_per_accumulation_window')
     write('SUCCESS.json', result); print(json.dumps(result), flush=True)
 
 

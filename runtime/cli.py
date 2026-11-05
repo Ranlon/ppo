@@ -27,7 +27,11 @@ def profile(path):
 
 
 def read_rows(path,count):
-    rows=[json.loads(line) for line in Path(path).read_text(encoding='utf-8-sig').splitlines() if line.strip()]
+    if Path(path).suffix == '.parquet':
+        import pyarrow.parquet as pq
+        rows=pq.read_table(path,columns=['question','answer']).to_pylist()
+    else:
+        rows=[json.loads(line) for line in Path(path).read_text(encoding='utf-8-sig').splitlines() if line.strip()]
     from numeric_reward import numeric_answer
     assert len(rows)==count,(path,len(rows),count)
     assert all(isinstance(r['question'],str) and r['question'].strip() and
@@ -43,6 +47,11 @@ def prepare(args):
     from llamafactory.data.processor.unsupervised import UnsupervisedDatasetProcessor
     selected=profile(args.profile)
     if args.merge_backup:selected['runtime']['merge_backup']=args.merge_backup
+    if args.sft_odb:
+        if args.odb_token_budget <= 0 or args.odb_buffer_size < 2:
+            raise ValueError('ODB requires positive token budget and buffer size >= 2')
+        selected['sft']['odb']=dict(token_budget=args.odb_token_budget,
+            buffer_size=args.odb_buffer_size,gradient_accumulation_steps=1)
     model=Path(args.model).expanduser().resolve()
     model_config=read(model/'config.json')
     assert model_config['model_type']=='qwen3' and model_config['num_hidden_layers']==36
@@ -191,6 +200,9 @@ def main():
     p.add_argument('--profile',default='baseline');p.add_argument('--run-dir',required=True)
     for key in ('model','train','test'):p.add_argument('--'+key,required=True)
     p.add_argument('--merge-backup',choices=['gpu','cpu'])
+    p.add_argument('--sft-odb',action='store_true',help='Enable single-GPU ODB only during SFT')
+    p.add_argument('--odb-token-budget',type=int,default=1024)
+    p.add_argument('--odb-buffer-size',type=int,default=64)
     for command in ('sft','ppo','quality','evaluate','all','verify'):
         item=sub.add_parser(command);item.add_argument('--run-dir',required=True)
         if command in ('sft','all'):

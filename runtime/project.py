@@ -9,6 +9,8 @@ PROJECT = Path(__file__).resolve().parents[1]
 CODE = PROJECT / 'runtime'
 VENDOR = PROJECT / 'vendor/llamafactory/src'
 sys.path.insert(0, str(VENDOR))
+ODB_VENDOR = PROJECT / 'vendor/odb/src'
+sys.path.insert(0, str(ODB_VENDOR))
 
 def run_root():
     return Path(os.environ['PPO4_RUN_ROOT']).expanduser().resolve()
@@ -31,7 +33,7 @@ def sha(path):
     return digest.hexdigest()
 
 def source_manifest():
-    paths = [PROJECT / 'run.py', *CODE.glob('*.py'), *VENDOR.rglob('*.py'),
+    paths = [PROJECT / 'run.py', *CODE.glob('*.py'), *VENDOR.rglob('*.py'), *ODB_VENDOR.rglob('*.py'),
              * (PROJECT / 'configs').glob('*.yaml'), * (PROJECT / 'configs').glob('*.json')]
     return {p.relative_to(PROJECT).as_posix(): sha(p) for p in sorted(paths)}
 
