@@ -1,0 +1,13 @@
+{
+  "model": "GSM8K exact numeric answer rule (no learned reward model)",
+  "reward_type": "exact_numeric_answer",
+  "correct_score": 1.0,
+  "incorrect_score": 0.0,
+  "train_sha256": "17f347dc51477c50d4efb83959dbb7c56297aba886e5544ee2aaed3024813465",
+  "scorer_source_sha256": "6ab8c57f88f7618c75d3b4e668df8c34456fee8ba5cf3a75b4a7b9d17999f4fe",
+  "training_labels_only": true,
+  "learned_reward_model_loaded": false,
+  "format_bonus": false,
+  "parsing": "#### first, otherwise last boxed/final number; Decimal normalized equality",
+  "revision": "f7ce4caa23cded4f70363b3ea4198da06acde5817ffb4e9a1ec4c7fb12e1adb5"
+}

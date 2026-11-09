@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "smoke": false,
+  "full_dataset_completed": true,
+  "examples": 7473,
+  "optimizer_updates": 935,
+  "input_tokens": 1430635,
+  "supervised_tokens": 925107,
+  "exactly_once": true,
+  "resume_source": null,
+  "checkpoint_policy": "all",
+  "program_seconds": 2591.9392659501173,
+  "train_runtime": 2581.3235,
+  "adapter": "/hpc_stor01/home/mengqi.li_sx/Project200/ppo/outputs/sft_odb_compare_20261105_175703/baseline/sft/model",
+  "adapter_sha256": "b1dc174a0eb8c5edef7da30227d2911dc533a339c76c791d6352a2e28984a190",
+  "allocator_ooms": 0,
+  "allocator_retries": 0,
+  "peak_allocated_gib": 8.816981315612793,
+  "complete_hf_checkpoints": [
+    "/hpc_stor01/home/mengqi.li_sx/Project200/ppo/outputs/sft_odb_compare_20261105_175703/baseline/sft/model/checkpoint-1",
+    "/hpc_stor01/home/mengqi.li_sx/Project200/ppo/outputs/sft_odb_compare_20261105_175703/baseline/sft/model/checkpoint-250",
+    "/hpc_stor01/home/mengqi.li_sx/Project200/ppo/outputs/sft_odb_compare_20261105_175703/baseline/sft/model/checkpoint-500",
+    "/hpc_stor01/home/mengqi.li_sx/Project200/ppo/outputs/sft_odb_compare_20261105_175703/baseline/sft/model/checkpoint-750",
+    "/hpc_stor01/home/mengqi.li_sx/Project200/ppo/outputs/sft_odb_compare_20261105_175703/baseline/sft/model/checkpoint-935"
+  ],
+  "fresh_from_base": true,
+  "original_alpaca_adapter_not_loaded": true,
+  "native_e0_settings_with_output_head_lora": true
+}

@@ -1,0 +1,29 @@
+{
+  "model": {
+    "config.json": "304b2545a258d35620f1d4bf46940c0471d9baa00715ff8e77f84c2fca5057c1",
+    "generation_config.json": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+    "model-00001-of-00003.safetensors": "4c807e2503d68ae373d508689d00a41f4b33f33c2536da97ab81a20caddc1241",
+    "model-00002-of-00003.safetensors": "f4707585548b2fc75a6b1d732e8465c62040a8699903c32850781beeb9b27826",
+    "model-00003-of-00003.safetensors": "c7b1aa8fb672de2e00423c99876926022e50b18d4f0d140670788510a27f9965",
+    "model.safetensors.index.json": "d6c42883a895dfef5b0080ed2116a1bcd764f558406b98923d675978a1abf29c",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "3c04ed3ca964ea2f6b2b5faf0dc4d31aec1cb1e8b4bcf63f402d295046b422b5",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "data": {
+    "train": {
+      "sha256": "6043ef64147b59871f4fd3adf669c306fe0a4c27e5a5c4bfb761f3f084895a13",
+      "examples": 7473
+    },
+    "test": {
+      "sha256": "752adc99f23132275139f1f7be57126b08735a55daf0c56859ee6df70abafbac",
+      "examples": 1319
+    }
+  },
+  "prepared_data": {
+    "data/gsm8k_sft.json": "a3fde16caa65a3e5fe9893e49fe61bcf3df47398947ef25403fdd349f91d01fb",
+    "data/gsm8k_ppo.json": "7b00a1157e62a4bcbfaef03a652ea3dfc153309752dc64181e4cae75f8826cb6",
+    "data/dataset_info.json": "222b306464afa08ec0bb8a3696b5337a5af32ac86e3c5f91034db1201e112fed",
+    "PPO_PROMPT_METADATA.jsonl": "f8b0870397e1a23a4bdcff522dd93ab99eaf8f4eb27b17d02df5d6baa3dc3727"
+  }
+}

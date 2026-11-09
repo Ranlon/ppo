@@ -1,0 +1,8 @@
+{
+    "effective_tokens_per_sec": 558.8047105779972,
+    "epoch": 1.0,
+    "train_loss": 0.24505576054680156,
+    "train_runtime": 2560.1699,
+    "train_samples_per_second": 2.919,
+    "train_steps_per_second": 0.365
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "sft",
+  "updates": 1787,
+  "total_updates": 7473,
+  "examples": 7473,
+  "total_examples": 7473,
+  "elapsed_seconds": 695.6633831420913,
+  "input_tokens": 1430635,
+  "supervised_tokens": 925107,
+  "input_tokens_per_second": 2056.5046754915784,
+  "supervised_tokens_per_second": 1329.819884757459,
+  "estimated_remaining_seconds": 0.0,
+  "odb": {
+    "token_budget": 1024,
+    "buffer_size": 64,
+    "gradient_accumulation_steps": 1
+  },
+  "allocator_ooms": 0,
+  "allocator_retries": 0,
+  "peak_allocated_gib": 9.718451976776123,
+  "peak_reserved_gib": 20.638671875
+}

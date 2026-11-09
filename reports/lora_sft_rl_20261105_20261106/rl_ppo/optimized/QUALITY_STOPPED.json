@@ -1,0 +1,12 @@
+{
+  "reason": "K3 KL exceeded safety bound: 51.921600341796875",
+  "batches": 862,
+  "checkpoint": {
+    "completed_batches": 862,
+    "path": "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_optimized_a800_20261105/runs/full/state_checkpoints/step_000862/training_state.pt",
+    "sha256": "8925dcccc1ffd11e7bd68d40bc3549c3e8d06d50f21ef295b8027d5ff2aa2935",
+    "bytes": 216033204,
+    "complete_ppo_state": true,
+    "seconds": 1.6019933302886784
+  }
+}

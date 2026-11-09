@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "smoke": false,
+  "full_dataset_completed": true,
+  "examples": 7473,
+  "optimizer_updates": 935,
+  "input_tokens": 1430635,
+  "supervised_tokens": 925107,
+  "exactly_once": true,
+  "resume_source": null,
+  "checkpoint_policy": "none",
+  "program_seconds": 1930.371556069702,
+  "train_runtime": 1915.9082,
+  "adapter": "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_optimized_a800_20261105/sft/model",
+  "adapter_sha256": "7242dc3426a6a521e7d29666de7c51df1aaccbe7d4073bf0968d9ca4a8b301e7",
+  "allocator_ooms": 0,
+  "allocator_retries": 0,
+  "peak_allocated_gib": 12.247028827667236,
+  "complete_hf_checkpoints": [
+    "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_optimized_a800_20261105/sft/model/checkpoint-1",
+    "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_optimized_a800_20261105/sft/model/checkpoint-250",
+    "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_optimized_a800_20261105/sft/model/checkpoint-500",
+    "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_optimized_a800_20261105/sft/model/checkpoint-750",
+    "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_optimized_a800_20261105/sft/model/checkpoint-935"
+  ],
+  "fresh_from_base": true,
+  "original_alpaca_adapter_not_loaded": true,
+  "native_e0_settings_with_output_head_lora": true
+}
