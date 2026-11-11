@@ -1,0 +1,42 @@
+{
+  "full_dataset_completed": true,
+  "batches": 2491,
+  "examples": 7473,
+  "unique_examples": 7473,
+  "exactly_once": true,
+  "elapsed_seconds": 48631.10464021377,
+  "input_tokens": 505528,
+  "response_tokens": 992825,
+  "input_plus_response_tokens_per_second": 30.810589458849964,
+  "response_tokens_per_second": 20.415431797101693,
+  "reference_unchanged": true,
+  "original_sft_checkpoint_unchanged": true,
+  "all_ppo_updates_per_batch": 4,
+  "optimizer_updates": 9964,
+  "variant": "native",
+  "strict": false,
+  "stress": false,
+  "max_allocated_gib": 19.21089220046997,
+  "max_reserved_gib": 23.548828125,
+  "allocator_ooms": 0,
+  "allocator_retries": 0,
+  "saved_model": "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_baseline_native_a800_20261105/runs/bench/model",
+  "complete_checkpoint": {
+    "completed_batches": 2491,
+    "path": "/hpc_stor01/home/mengqi.li_sx/ppo/outputs/qwen3_4b_baseline_native_a800_20261105/runs/bench/state_checkpoints/step_002491/training_state.pt",
+    "sha256": "42c2d75845b765da7176489f6b5bad3458474af0550d994159018caad91326b7",
+    "bytes": 220173748,
+    "complete_ppo_state": true,
+    "seconds": 0.8633978730067611
+  },
+  "reward_model": "GSM8K exact numeric answer rule (no learned reward model)",
+  "reward_revision": "f7ce4caa23cded4f70363b3ea4198da06acde5817ffb4e9a1ec4c7fb12e1adb5",
+  "portable_runtime": {
+    "rollout": "native",
+    "python_gc_per_batch": false,
+    "head_probabilities": "native",
+    "static_cache_length": 768,
+    "merge_backup": "gpu",
+    "merge_chunk_rows": 1024
+  }
+}

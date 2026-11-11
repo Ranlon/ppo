@@ -1,0 +1,23 @@
+{
+  "batch": 862,
+  "total_batches": 2491,
+  "run_stop_batch": 2491,
+  "examples": 2586,
+  "elapsed_seconds": 5595.183476607781,
+  "input_plus_response_tokens_per_second": 89.26856502350456,
+  "response_tokens_per_second": 58.20470434285796,
+  "recent_seconds_per_batch": 6.326920332349837,
+  "recent_math_reward_rate": 0.7499999999999996,
+  "recent_eos_stop_rate": 0.9666666666666667,
+  "recent_k3_kl": 4.930608773827553,
+  "recent_raw_signed_kl": 4.212997516095638,
+  "quality_zero_reward_streak": 0,
+  "loss": 0.5536099672317505,
+  "kl": 51.921600341796875,
+  "reward_mean": 0.3333333333333333,
+  "variant": "compiled",
+  "peak_allocated_gib": 25.44349956512451,
+  "peak_reserved_gib": 26.333984375,
+  "allocator_ooms": 0,
+  "allocator_retries": 0
+}

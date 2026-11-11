@@ -1,0 +1,139 @@
+{
+  "first800_phase_metrics": {
+    "baseline": {
+      "mean_batch_seconds": 20.791115219807253,
+      "mean_generation_seconds": 13.626988335304196,
+      "mean_ppo_step_seconds": 7.090036072815419,
+      "mean_other_seconds": 0.07409081168763805,
+      "gc_seconds": 2.883972647356568,
+      "cache_seconds": 0.9535839461977593,
+      "generation_response_tps": 28.73543958245847,
+      "ppo_response_tps": 18.83388629518788,
+      "mean_response_tokens_per_sample": 130.52583333333334,
+      "mean_max_response_tokens": 188.175,
+      "response_slot_efficiency": 0.6936406713608786,
+      "p95_batch_seconds": 35.10706701828167,
+      "median_batch_seconds": 19.539601817261428,
+      "first_batch_seconds": 16.514025018084794,
+      "max_k3_full": 42.99108123779297,
+      "max_k3_first800": 10.362504959106445,
+      "q99_k3_full": 10.057011604309082,
+      "batch862": {
+        "indices": [
+          6372,
+          261,
+          2690
+        ],
+        "response_lengths": [
+          202,
+          186,
+          105
+        ],
+        "scores": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "k3_kl": 2.118241786956787,
+        "value_loss": 0.5492451190948486,
+        "loss": 0.05602932721376419
+      },
+      "trl_phase_mean_seconds": {
+        "time/ppo/forward_pass": 0.9589430472254753,
+        "time/ppo/compute_rewards": 0.001359824538230896,
+        "time/ppo/compute_advantages": 0.015803231000900267,
+        "time/ppo/optimize_step": 5.740550093054772,
+        "time/ppo/calc_stats": 0.0027702054381370544,
+        "time/ppo/total": 6.719549318253994
+      }
+    },
+    "optimized": {
+      "mean_batch_seconds": 6.300307336781989,
+      "mean_generation_seconds": 3.098154299213202,
+      "mean_ppo_step_seconds": 2.7008295058982914,
+      "mean_other_seconds": 0.5013235316704958,
+      "gc_seconds": 0.43343551410653164,
+      "cache_seconds": 0.20030738839588594,
+      "generation_response_tps": 121.75474930212366,
+      "ppo_response_tps": 59.87247602950593,
+      "mean_response_tokens_per_sample": 125.73833333333333,
+      "mean_max_response_tokens": 178.75875,
+      "response_slot_efficiency": 0.7033968034198792,
+      "p95_batch_seconds": 9.005187151022255,
+      "median_batch_seconds": 5.739930605515838,
+      "first_batch_seconds": 206.51159034203738,
+      "max_k3_full": 51.921600341796875,
+      "max_k3_first800": 12.380855560302734,
+      "q99_k3_full": 8.053831100463867,
+      "batch862": {
+        "indices": [
+          6372,
+          261,
+          2690
+        ],
+        "response_lengths": [
+          193,
+          381,
+          116
+        ],
+        "scores": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "k3_kl": 51.921600341796875,
+        "value_loss": 5.526551723480225,
+        "loss": 0.5536099672317505
+      },
+      "trl_phase_mean_seconds": {
+        "time/ppo/forward_pass": 0.34889344841241837,
+        "time/ppo/compute_rewards": 0.0012620416283607482,
+        "time/ppo/compute_advantages": 0.015265476107597351,
+        "time/ppo/optimize_step": 2.327093735039234,
+        "time/ppo/calc_stats": 0.0033302286267280577,
+        "time/ppo/total": 2.6960050961375237
+      }
+    }
+  },
+  "disjoint_phase_contributions": {
+    "mean_generation_seconds": {
+      "seconds_saved_per_batch": 10.528834036090995,
+      "seconds_saved_800": 8423.067228872796,
+      "share_of_net_time_saved": 0.7265870972193772
+    },
+    "mean_ppo_step_seconds": {
+      "seconds_saved_per_batch": 4.389206566917128,
+      "seconds_saved_800": 3511.3652535337023,
+      "share_of_net_time_saved": 0.3028959187333307
+    },
+    "mean_other_seconds": {
+      "seconds_saved_per_batch": -0.4272327199828578,
+      "seconds_saved_800": -341.7861759862862,
+      "share_of_net_time_saved": -0.0294830159527078
+    }
+  },
+  "gc_nested_observation": {
+    "saved_seconds_per_batch": 2.450537133250036,
+    "fraction_of_net_savings": 0.1691097662070746,
+    "causal_ablation": false,
+    "warning": "Nested within phase timing; do not add to phase savings."
+  },
+  "merge_cumulative_through800_including_warmup": {
+    "calls": 801,
+    "initialization_seconds": 194.87914227927104,
+    "cache_length": 768,
+    "norm": "staged_native_mean",
+    "backend": "inductor",
+    "mode": "full_temporary_merge",
+    "backup_device": "gpu",
+    "backup_bytes": 7266631680,
+    "independent_head_bytes": 777912320,
+    "generation_calls": 801,
+    "merge_seconds": 60.48375828191638,
+    "restore_and_verification_seconds": 34.42132196156308,
+    "exact_restore": true,
+    "bf16_forward_equivalence": false
+  },
+  "attribution_limit": "Only two combined variants were measured; no independent ablation for compilation/cache/merge/norm/head. Independent SFT adapters and variable generated lengths also differ.",
+  "k3_limit": "A scalar sequence-summed batch statistic spike; no per-token or per-sequence K3 logged, so the responsible token/sample and root cause cannot be identified."
+}
