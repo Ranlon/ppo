@@ -1,0 +1,11 @@
+name: baseline
+description: B4 native rollout; original SFT and PPO checkpointing
+sft:
+  checkpoint_policy: all
+runtime:
+  rollout: native
+  python_gc_per_batch: false
+  head_probabilities: native
+  static_cache_length: 768
+  merge_backup: gpu
+  merge_chunk_rows: 1024
